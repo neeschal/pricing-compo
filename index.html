@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="top">
+        <h2>Our Pricing</h2>
+        <div class="plan-container">
+          <h4>Annually</h4>
+          <label class="switch">
+            <input id="checked" type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <h4>Monthly</h4>
+        </div>
+      </div>
+
+      <div class="price-card-container">
+        <div class="card basic">
+          <h3>Basic</h3>
+          <h1 id="monthly" class="monthly">&dollar;19.99</h1>
+          <h1 id="yearly" class="yearly hide">&dollar;199.99</h1>
+          <ul>
+            <li>500 GB Storage</li>
+            <li>2 Users Allowed</li>
+            <li>Send up to 3 GB</li>
+            <li><a href="#">Learn More</a></li>
+          </ul>
+        </div>
+        <div class="card professional">
+          <h3>Professional</h3>
+          <h1 id="monthly_pro" class="monthly">&dollar;24.99</h1>
+          <h1 id="yearly_pro" class="yearly hide">&dollar;249.99</h1>
+          <ul>
+            <li>1 TB Storage</li>
+            <li>5 Users Allowed</li>
+            <li>Send up to 10 GB</li>
+            <li><a href="#">Learn More</a></li>
+          </ul>
+        </div>
+        <div class="card master">
+          <h3>Master</h3>
+          <h1 id="monthly_master" class="monthly">&dollar;39.99</h1>
+          <h1 id="yearly_master" class="yearly hide">&dollar;399.99</h1>
+          <ul>
+            <li>2 TB Storage</li>
+            <li>10 Users Allowed</li>
+            <li>Send up to 20 GB</li>
+            <li><a href="#">Learn More</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

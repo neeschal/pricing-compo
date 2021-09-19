@@ -1,0 +1,207 @@
+$Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+$Light-Grayish-Blue: hsl(234, 14%, 74%);
+$Grayish-Blue: hsl(233, 13%, 49%);
+$Dark-Grayish-Blue: hsl(232, 13%, 33%);
+
+body {
+  box-sizing: border-box;
+  background-color: $Very-Light-Grayish-Blue;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  background-image: url(../images/bg-top.svg);
+  background-size: 40% 30%;
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+}
+h1 {
+  color: $Dark-Grayish-Blue;
+}
+h3 {
+  color: $Grayish-Blue;
+}
+h4 {
+  color: $Light-Grayish-Blue;
+}
+.hide {
+  display: none;
+}
+.main-container {
+  text-align: center;
+  width: 90%;
+  margin: 3rem auto;
+
+  .top {
+    h2 {
+      color: $Grayish-Blue;
+      font-size: 2rem;
+      font-weight: 100;
+    }
+    .plan-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: hsl(237, 63%, 64%);
+          transition: 0.4s;
+          &:hover {
+            background-color: hsl(236, 72%, 79%);
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            right: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+          }
+        }
+        input:checked + .slider {
+          background-color: hsl(237, 63%, 64%);
+          &:hover {
+            background-color: hsl(236, 72%, 79%);
+          }
+        }
+        input:focus + .slider {
+          box-shadow: 0 0 1px hsl(237, 63%, 64%);
+        }
+        input:checked + .slider:before {
+          transform: translateX(-26px);
+        }
+        .slider.round {
+          border-radius: 34px;
+        }
+        .slider.round:before {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .price-card-container {
+    margin-top: 3rem;
+    .card {
+      background-color: white;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 1px 3px 10px rgb(212, 207, 207);
+      h1 {
+        font-size: 4rem;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          border-top: 1px solid rgb(230, 219, 219);
+          padding: 1rem;
+          color: $Grayish-Blue;
+          a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            background-image: linear-gradient(
+              to right,
+              hsl(236, 72%, 79%),
+              hsl(237, 63%, 64%)
+            );
+            padding: 1rem;
+            border-radius: 5px;
+            letter-spacing: 0.1rem;
+            text-transform: uppercase;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .professional {
+      background-image: linear-gradient(
+        to bottom,
+        hsl(236, 72%, 79%),
+        hsl(237, 63%, 64%)
+      );
+      box-shadow: 1px 4px 5px hsl(237, 16%, 52%);
+      h3,
+      h1 {
+        color: white;
+      }
+      ul {
+        li {
+          color: white;
+          a {
+            background-image: none;
+            background-color: white;
+            color: hsl(237, 63%, 64%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 770px) {
+  body {
+    background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 100% 0%, 0 100%;
+    background-size: 30%;
+  }
+  .main-container {
+    height: 100%;
+    .price-card-container {
+      width: 85%;
+      margin: 3rem auto 0 auto;
+      align-items: center;
+      display: flex;
+      .card {
+        width: 90%;
+        a {
+          &:hover {
+            background-image: none;
+            background-color: white;
+            border: 1px solid hsl(237, 63%, 64%);
+            color: hsl(237, 63%, 64%);
+          }
+        }
+      }
+      .basic {
+        border-radius: 10px 0 0 10px;
+      }
+      .master {
+        border-radius: 0 10px 10px 0;
+      }
+      .professional {
+        padding-top: 3.2rem;
+        height: 31rem;
+        box-shadow: 0 3px 5px hsl(235, 6%, 57%);
+        a {
+          &:hover {
+            background-color: hsl(237, 63%, 64%);
+            border: 1px solid white;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
